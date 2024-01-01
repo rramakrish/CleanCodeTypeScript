@@ -1,14 +1,14 @@
-import { StarShipModel } from "domain/base/models/StarShipModel";
-import { StarWarsModel } from "domain/base/models/StarWarsModel";
 import { Observable } from "rxjs";
 import { IStarWars } from "./StarWars";
+import { PeopleResult } from "../models/StarWarsPeople";
+import { StartShipResult } from "../models/StarShip";
 
 export class StarWarsRepositoryImpl implements IStarWars{
     // this uses the mappers for data conversion
-    getPeople(): Observable<StarWarsModel>{
+    getPeople(): Observable<PeopleResult>{
         throw new Error("Method not implemented.");
     }
-    getStarShip(): Observable<StarShipModel>{
+    getStarShip(): Observable<StartShipResult>{
         throw new Error("Method not implemented.");
     }
 

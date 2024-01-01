@@ -1,9 +1,10 @@
-import { UseCase } from "domain/base/UseCase";
-import { StarWarsModel } from "domain/base/models/StarWarsModel";
-import { Observable } from "rxjs";
 
-export class StarShipUseCases implements UseCase<{id:1},StarWarsModel>{
-    execute(params: { id: 1; }): Observable<StarWarsModel> {
+import { Observable } from "rxjs";
+import { UseCase } from "../base/utils/UseCase";
+import { StartShipResult } from "../models/StarShip";
+
+export class StarShipUseCases implements UseCase<{id:1},StartShipResult>{
+    execute(params: { id: 1; }): Observable<StartShipResult> {
         throw new Error("Method not implemented.");
     }
 
