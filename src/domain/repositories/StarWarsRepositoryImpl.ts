@@ -21,10 +21,9 @@ export class StarWarsRepositoryImpl implements IStarWars{
                     }
                     return response.json()
                 })
-                .then((data)=>{map(this.mapper.mapFrom)})
+                .then((data) => {return this.mapper.mapFrom(data)})
                 .catch((error) => {throw new Error("Something went wrong")})
         );
-        throw new Error("Method not implemented.");
     }
     getStarShip(): Observable<StartShipModel>{
         throw new Error("Method not implemented.");
