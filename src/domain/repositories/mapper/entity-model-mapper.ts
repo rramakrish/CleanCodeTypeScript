@@ -2,7 +2,10 @@ import { Mapper } from "src/domain/base/utils/Mapper";
 import { PeopleEntity } from "../entity/StarWarsPeople";
 import { People, PeopleModel } from "src/domain/models/StarWarsPeople";
 
-export class UserImplementationRepositoryMapper extends Mapper<PeopleEntity, PeopleModel> {
+export class EntityModelMapper extends Mapper<PeopleEntity, PeopleModel> {
+    override mapTo(param: PeopleModel): PeopleEntity {
+        throw new Error("Method not implemented.");
+    }
     mapFrom(param: PeopleEntity): PeopleModel {
         return {
             count: param.count,
@@ -28,14 +31,14 @@ export class UserImplementationRepositoryMapper extends Mapper<PeopleEntity, Peo
             })
         };
     }
-    mapTo(param: UserModel): UserEntity {
-        return {
-            id: param.id,
-            name: param.fullName,
-            userName: param.username,
-            phoneNumber: param.phoneNum,
-            userPicture: param.profilePicture,
-            activationStatus: param.activationStatus
-        }
-    }
+    // mapTo(param: UserModel): UserEntity {
+    //     return {
+    //         id: param.id,
+    //         name: param.fullName,
+    //         userName: param.username,
+    //         phoneNumber: param.phoneNum,
+    //         userPicture: param.profilePicture,
+    //         activationStatus: param.activationStatus
+    //     }
+    // }
 }
