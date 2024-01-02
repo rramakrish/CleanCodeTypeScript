@@ -1,4 +1,4 @@
-export interface PeopleModel {
+export interface PeopleEntity {
     count: number;
     next: string;
     previous?: any;
