@@ -1,10 +1,11 @@
 
 
 import { Observable } from "rxjs";
-import { PeopleResult } from "../models/StarWarsPeople";
-import { StartShipResult } from "../models/StarShip";
+import { PeopleModel } from "../models/StarWarsPeople";
+import { StartShipModel } from "../models/StarShip";
+import { PeopleEntity } from "./entity/StarWarsPeople";
 
 export interface IStarWars{
-    getPeople:()=>Observable<PeopleResult>
-    getStarShip:()=>Observable<StartShipResult>
+    getPeople:()=>Observable<PeopleModel>
+    getStarShip:()=>Observable<StartShipModel>
 }
